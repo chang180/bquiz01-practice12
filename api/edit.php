@@ -18,6 +18,15 @@ foreach ($_POST['id'] as $key => $id) {
             case "image":
                 $row['sh'] = in_array($id, $_POST['sh']) ? 1 : 0;
                 break;
+            case "menu":
+                $row['text'] = $_POST['text'][$key];
+                $row['name'] = $_POST['name'][$key];
+                $row['sh'] = in_array($id, $_POST['sh']) ? 1 : 0;
+                break;
+            case "admin":
+                $row['acc'] = $_POST['acc'][$key];
+                $row['pw'] = $_POST['pw'][$key];
+                break;
             default:
                 $row['text'] = $_POST['text'][$key];
                 $row['sh'] = in_array($id, $_POST['sh']) ? 1 : 0;

@@ -14,7 +14,21 @@ switch ($table) {
         $row['text'] = $_POST['text'];
         $row['sh'] = 0;
         break;
+    case "menu":
+        $row['name'] = $_POST['name'];
+        $row['text'] = $_POST['text'];
+        $row['sh'] = 1;
+        $row['parent']=0;
+        break;
+    case "admin":
+        $row['acc'] = $_POST['acc'];
+        $row['pw'] = $_POST['pw'];
+        break;
     case "ad":
+        $row['text'] = $_POST['text'];
+        $row['sh'] = 1;
+        break;
+    case "news":
         $row['text'] = $_POST['text'];
         $row['sh'] = 1;
         break;
